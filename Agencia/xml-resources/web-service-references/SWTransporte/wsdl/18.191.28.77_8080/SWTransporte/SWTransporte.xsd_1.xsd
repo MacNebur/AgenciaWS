@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://Controlador/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Controlador/">
+
+<xs:element name="buscarCamion" type="tns:buscarCamion" />
+
+<xs:element name="buscarCamionResponse" type="tns:buscarCamionResponse" />
+
+<xs:element name="comprarBoleto" type="tns:comprarBoleto" />
+
+<xs:element name="comprarBoletoResponse" type="tns:comprarBoletoResponse" />
+
+<xs:element name="listaDestinos" type="tns:listaDestinos" />
+
+<xs:element name="listaDestinosResponse" type="tns:listaDestinosResponse" />
+
+<xs:element name="listaOrigenes" type="tns:listaOrigenes" />
+
+<xs:element name="listaOrigenesResponse" type="tns:listaOrigenesResponse" />
+
+<xs:complexType name="buscarCamion">
+<xs:sequence>
+<xs:element name="origen" type="xs:string" minOccurs="0" />
+<xs:element name="destino" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarCamionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaOrigenes">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listaOrigenesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaDestinos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listaDestinosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="comprarBoleto">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="origen" type="xs:string" minOccurs="0" />
+<xs:element name="destino" type="xs:string" minOccurs="0" />
+<xs:element name="fecha" type="xs:string" minOccurs="0" />
+<xs:element name="hora" type="xs:string" minOccurs="0" />
+<xs:element name="num_asientos" type="xs:int" />
+<xs:element name="precio" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="comprarBoletoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

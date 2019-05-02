@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://18.191.28.77:8080/Clientes/ClientesServer?wsdl" uri="wsdl/18.191.28.77_8080/Clientes/ClientesServer.wsdl"/>
     <system systemId="http://18.191.28.77:8080/Clientes/ClientesServer?xsd=1" uri="wsdl/18.191.28.77_8080/Clientes/ClientesServer.xsd_1.xsd"/>
+    <system systemId="http://18.191.28.77:8080/SWTransporte/SWTransporte?wsdl" uri="wsdl/18.191.28.77_8080/SWTransporte/SWTransporte.wsdl"/>
+    <system systemId="http://18.191.28.77:8080/SWTransporte/SWTransporte?xsd=1" uri="wsdl/18.191.28.77_8080/SWTransporte/SWTransporte.xsd_1.xsd"/>
+    <system systemId="http://18.191.28.77:8080/pasarelaPago/Pasarela?wsdl" uri="wsdl/18.191.28.77_8080/pasarelaPago/Pasarela.wsdl"/>
+    <system systemId="http://18.191.28.77:8080/pasarelaPago/Pasarela?xsd=1" uri="wsdl/18.191.28.77_8080/pasarelaPago/Pasarela.xsd_1.xsd"/>
 </catalog>

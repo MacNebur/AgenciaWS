@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://pasarela.registro/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pasarela.registro/">
+
+<xs:element name="ConsultarHistorial" type="tns:ConsultarHistorial" />
+
+<xs:element name="ConsultarHistorialResponse" type="tns:ConsultarHistorialResponse" />
+
+<xs:element name="ConsultarTransaccion" type="tns:ConsultarTransaccion" />
+
+<xs:element name="ConsultarTransaccionResponse" type="tns:ConsultarTransaccionResponse" />
+
+<xs:element name="Registro" type="tns:Registro" />
+
+<xs:element name="RegistroResponse" type="tns:RegistroResponse" />
+
+<xs:element name="Transaccion" type="tns:Transaccion" />
+
+<xs:element name="TransaccionResponse" type="tns:TransaccionResponse" />
+
+<xs:complexType name="ConsultarTransaccion">
+<xs:sequence>
+<xs:element name="ID" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultarTransaccionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Registro">
+<xs:sequence>
+<xs:element name="Correo" type="xs:string" minOccurs="0" />
+<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RegistroResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Transaccion">
+<xs:sequence>
+<xs:element name="NoCuentaOrigen" type="xs:string" minOccurs="0" />
+<xs:element name="NoCuentaDestino" type="xs:string" minOccurs="0" />
+<xs:element name="Monto" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TransaccionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultarHistorial">
+<xs:sequence>
+<xs:element name="NoCompania" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultarHistorialResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

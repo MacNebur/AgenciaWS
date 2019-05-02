@@ -10,7 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -38,6 +40,13 @@ public class RegistrarController implements Initializable {
         String usuario = txf_usuario.getText().toString();
         String contrasena = txf_contrasena.getText().toString();
         register(id,nombre,usuario,contrasena);
+        
+            Alert dialogo = new Alert(Alert.AlertType.INFORMATION);
+            dialogo.setTitle("Usuario o Contraseña incorrectos");
+            dialogo.setHeaderText(null);
+            dialogo.setContentText("Usuario o Contraseña inccorectos");
+            dialogo.initStyle(StageStyle.UTILITY);
+            dialogo.showAndWait();
     }
     
     /**

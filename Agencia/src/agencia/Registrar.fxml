@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="agencia.RegistrarController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agencia.RegistrarController">
    <children>
       <Pane prefHeight="450.0" prefWidth="295.0" style="-fx-background-color: #FAB800;">
          <children>
@@ -27,7 +26,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button fx:id="btn_crearCuenta" layoutX="90.0" layoutY="378.0" mnemonicParsing="false" style="-fx-background-radius: 5;" text="Crear cuenta">
+            <Button fx:id="btn_crearCuenta" layoutX="90.0" layoutY="378.0" mnemonicParsing="false" onAction="#btn_crearCuenta" style="-fx-background-radius: 5;" text="Crear cuenta">
                <font>
                   <Font size="18.0" />
                </font>
