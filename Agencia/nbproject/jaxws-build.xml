@@ -16,27 +16,10 @@
             <classpath path="${libs.jaxws21.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-client-ClientesServer" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
-        <property name="wsdl-ClientesServer" location="xml-resources/web-service-references/ClientesServer/wsdl/18.191.28.77_8080/Clientes/ClientesServer.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ClientesServer" destdir="${build.generated.dir}/jax-wsCache/ClientesServer" wsdl="${wsdl-ClientesServer}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://18.191.28.77:8080/Clientes/ClientesServer?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-ClientesServer}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/ClientesServer">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-ClientesServer" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/mx/agencia"/>
-    </target>
     <target name="wsimport-client-SWTransporte" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/SWTransporte"/>
-        <property name="wsdl-SWTransporte" location="xml-resources/web-service-references/SWTransporte/wsdl/18.191.28.77_8080/SWTransporte/SWTransporte.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SWTransporte" destdir="${build.generated.dir}/jax-wsCache/SWTransporte" wsdl="${wsdl-SWTransporte}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://18.191.28.77:8080/SWTransporte/SWTransporte?wsdl" xnocompile="true" xendorsed="true">
+        <property name="wsdl-SWTransporte" location="xml-resources/web-service-references/SWTransporte/wsdl/13.59.54.99_8080/SWTransporte/SWTransporte.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SWTransporte" destdir="${build.generated.dir}/jax-wsCache/SWTransporte" wsdl="${wsdl-SWTransporte}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://13.59.54.99:8080/SWTransporte/SWTransporte?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-SWTransporte}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/SWTransporte"/>
         </wsimport>
@@ -50,10 +33,27 @@
         <delete dir="${build.generated.dir}/jax-wsCache/SWTransporte"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/controlador"/>
     </target>
+    <target name="wsimport-client-ClientesServer" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
+        <property name="wsdl-ClientesServer" location="xml-resources/web-service-references/ClientesServer/wsdl/13.59.54.99_8080/Clientes/ClientesServer.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ClientesServer" destdir="${build.generated.dir}/jax-wsCache/ClientesServer" wsdl="${wsdl-ClientesServer}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://13.59.54.99:8080/Clientes/ClientesServer?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ClientesServer}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ClientesServer">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ClientesServer" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ClientesServer"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/mx/agencia"/>
+    </target>
     <target name="wsimport-client-Pasarela" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/Pasarela"/>
-        <property name="wsdl-Pasarela" location="xml-resources/web-service-references/Pasarela/wsdl/18.191.28.77_8080/pasarelaPago/Pasarela.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Pasarela" destdir="${build.generated.dir}/jax-wsCache/Pasarela" wsdl="${wsdl-Pasarela}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://18.191.28.77:8080/pasarelaPago/Pasarela?wsdl" xnocompile="true" xendorsed="true">
+        <property name="wsdl-Pasarela" location="xml-resources/web-service-references/Pasarela/wsdl/13.59.54.99_8080/pasarelaPago/Pasarela.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Pasarela" destdir="${build.generated.dir}/jax-wsCache/Pasarela" wsdl="${wsdl-Pasarela}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://13.59.54.99:8080/pasarelaPago/Pasarela?wsdl" xnocompile="true" xendorsed="true">
             <depends file="${wsdl-Pasarela}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/Pasarela"/>
         </wsimport>
@@ -67,5 +67,5 @@
         <delete dir="${build.generated.dir}/jax-wsCache/Pasarela"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/registro/pasarela"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-ClientesServer, wsimport-client-SWTransporte, wsimport-client-Pasarela"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-SWTransporte, wsimport-client-ClientesServer, wsimport-client-Pasarela"/>
 </project>

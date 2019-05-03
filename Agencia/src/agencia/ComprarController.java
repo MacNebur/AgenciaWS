@@ -44,8 +44,8 @@ public class ComprarController implements Initializable {
     @FXML
     public void comprar(ActionEvent event) throws IOException{
         
-        String cuentaOrigen = "6555820782511769";
-        String cuentaDestino = "9266261271333690";
+        String cuentaOrigen = "5701538517696901";
+        String cuentaDestino = "2930187744831753";
         
         String id = id_compra.getText().toString();
         String origen = origen_compra.getText().toString();
